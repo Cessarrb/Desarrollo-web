@@ -56,7 +56,7 @@ p {
 	background-color: #1F1A36;
 	text-align: left;
 	padding: 15px;
-	margin-top: 30px;
+	margin-top: 15px;
 }
 
 .habilidades ul {
@@ -74,4 +74,14 @@ p {
 	font-size: 12px;
 	margin: 0 7px 7px 0;
 	padding: 7px;
+}
+
+.redes {
+    padding-top: 10px;
+}
+
+.bi {
+    color: #B3B8CD;
+    padding: 0 10px;
+    font-size: 30px;
 }
