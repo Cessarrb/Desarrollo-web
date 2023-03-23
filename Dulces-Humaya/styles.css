@@ -1,0 +1,11 @@
+.header-barra{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    background-image: url(./IMAGENES/Central/imagenCentral.png);
+    background-repeat: no-repeat;
+    background-size: 49rem;
+}
+
