@@ -1,11 +1,78 @@
-.header-barra{
-    display: flex;
-    justify-content: space-between;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header {
-    background-image: url(./IMAGENES/Central/imagenCentral.png);
-    background-repeat: no-repeat;
-    background-size: 49rem;
+.header-barra {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 12%;
 }
 
+.header-menu {
+  display: flex;
+  margin: 0 1rem;
+  gap: 2rem;
+}
+
+.logo {
+  height: 5rem;
+  width: 5rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.navegacion_menu {
+  list-style: none;
+}
+
+.navegacion_link {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.slide {
+  background-image: url(./IMAGENES/Central/imagenCentral.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  padding: 15rem;
+  width: 100%;
+  overflow: auto;
+}
+
+.text-container {
+  width: 50%;
+  max-width: 50%;
+  margin-left: 50%;
+}
+
+.text-container h1 {
+  color: white;
+  margin: 1rem 0;
+  font-weight: 100;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.text-container p {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.btn-conocenos {
+  display: block;
+  margin-top: 2rem;
+  background-color: rgba(24, 1, 1, 0.589);
+  border-radius: 2rem;
+  color: white;
+  padding: 1rem;
+  width: fit-content;
+  text-decoration: none;
+  margin: 1rem auto;
+}
