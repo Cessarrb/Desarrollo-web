@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/0cebf067a0.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -23,7 +27,7 @@
             <a href="#productos" class="navegacion_link">¿Productos?</a>
           </li>
           <li class="navegacion_menu">
-            <a href="#locales" class="navegacion_link">Locales</a>
+            <a href="#local" class="navegacion_link">Locales</a>
           </li>
           <li class="navegacion_menu">
             <a href="#contactanos" class="navegacion_link">Contacto</a>
@@ -174,8 +178,107 @@
         </div>
       </div>
     </section>
-    <section>
+    <div class="seccion-receta" id="recetas"></div>
+    <!-- RECETA -->
+    <section id="receta">
       <h2 class="titulos">RECETAS</h2>
+      <div class="receta-producto">
+        <p>
+          Descubre las mejores recetas de dulce de leche de la mano de Paulina
+          Cocina.
+        </p>
+        <div class="receta-colum">
+          <div class="box-receta">
+            <img src="IMAGENES/Receta/conitos.png" alt="" />
+            <div class="receta-texto">
+              <h3>CONITOS</h3>
+              <p>
+                Una deliciosa opción para acompañar las meriendas, ese antojo de
+                media noche o compartir con amigos.
+              </p>
+              <div class="link-btn">
+                <a class="btn-enviar" href="">PREPARACIÓN</a>
+              </div>
+            </div>
+          </div>
+          <div class="box-receta">
+            <img src="IMAGENES/Receta/pepas.png" alt="" />
+            <div class="receta-texto">
+              <h3>PEPAS</h3>
+              <p>
+                Las galletitas mas tierna y ricas, rellenas de dulce de leche,
+                ideales para el mate y la hora del té.
+              </p>
+              <div class="link-btn">
+                <a class="btn-enviar" href="">PREPARACIÓN</a>
+              </div>
+            </div>
+          </div>
+          <div class="box-receta">
+            <img src="IMAGENES/Receta/tortaNutt.png" alt="" />
+            <div class="receta-texto">
+              <h3>TORTA NUTT</h3>
+              <p>
+                La torta de tres capas más sabrosa del mundo, combinada con base
+                de vainilla, dulce de leche y cubierta de choconutt.
+              </p>
+              <div class="link-btn">
+                <a class="btn-enviar" href="">PREPARACIÓN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+    <!-- UBICACION -->
+    <div class="seccion-local" id="local"></div>
+    <footer id="footer">
+      <div class="slide-footer">
+        <nav class="menu-footer">
+          <img src="IMAGENES/Logo/LogoHumaya100x100.png" alt="" />
+          <div>
+            <p class="titulo-nav">MENÚ</p>
+            <ul class="nav-footer">
+              <li class="navegacion_menu">
+                <a href="#sobre-nosotros" class="navegacion_link"
+                  >¿Quienes somos?</a
+                >
+              </li>
+              <li class="navegacion_menu">
+                <a href="#productos" class="navegacion_link">¿Productos?</a>
+              </li>
+              <li class="navegacion_menu">
+                <a href="#locales" class="navegacion_link">Locales</a>
+              </li>
+              <li class="navegacion_menu">
+                <a href="#contactanos" class="navegacion_link">Contacto</a>
+              </li>
+              <li class="navegacion_menu">
+                <a href="#recetas" class="navegacion_link">Recetas</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="box-mapa">
+          <h2 class="titulos">Encontranos en:</h2>
+          <p>Montes de Oca 2356, CABA</p>
+          <iframe
+            class="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18582.42782792659!2d-58.45141859487165!3d-34.580380102166394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb50432a29d25%3A0xf99cef190a250e!2sCofi%20Jaus%20Palermo!5e0!3m2!1ses-419!2sar!4v1680116674016!5m2!1ses-419!2sar"
+          ></iframe>
+        </div>
+      </div>
+      <div class="brand" bis_skin_checked="1">
+        <p>Hecho por Cesar Algañaras</p>
+        <div class="links" bis_skin_checked="1">
+          <a href="https://github.com/Cessarrb"
+            ><i id="github" class="fab fa-github" aria-hidden="true"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/cesar-alga%C3%B1aras/"
+            ><i id="linkedin" class="fab fa-linkedin" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

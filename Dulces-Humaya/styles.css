@@ -41,7 +41,7 @@ body {
   height: 7rem;
   width: 8rem;
   margin-left: 2rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .navegacion_menu {
@@ -192,6 +192,17 @@ body {
   font-size: 2rem;
 }
 
+.link-btn {
+  margin: auto;
+  padding: 2rem;
+  width: fit-content;
+}
+
+.link-producto:hover {
+  background-color: #bca177;
+  color: black;
+}
+
 .text-img {
   flex-direction: row-reverse;
 }
@@ -209,6 +220,11 @@ body {
   background-color: #bca177;
   color: #574b37;
   padding: 0px 2rem 0 11rem;
+}
+
+.link-producto.box-maicena:hover {
+  background-color: #574b37;
+  color: #bca177;
 }
 
 .link-producto.box-maicena,
@@ -264,10 +280,143 @@ input {
   padding: 1rem;
   background-color: transparent;
   font-weight: 900;
+  text-decoration: none;
 }
 
 .btn-enviar:hover {
   background-color: #684723;
   color: #bca177;
   border: 3px solid #684723;
+}
+
+#receta {
+  background-color: rgb(36, 31, 31);
+}
+
+#receta .titulos {
+  background-color: transparent;
+  padding: 2rem;
+}
+
+.receta-producto {
+  margin: auto;
+  width: 70%;
+}
+
+.receta-colum {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+  padding: 2rem;
+}
+
+.box-receta {
+  background-color: #bca177;
+  color: #574b37;
+  overflow: hidden;
+}
+
+.box-receta img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+#receta h3 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+#receta p {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  color: white;
+  padding: 0 1.5rem;
+}
+
+#footer {
+  background-color: black;
+}
+
+#footer .titulos {
+  background-color: transparent;
+  padding: 0;
+  color: #bca177;
+}
+
+.slide-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem 0;
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 60%;
+  margin: auto;
+}
+
+.nav-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.titulo-nav {
+  color: #bca177;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.menu-footer img {
+  height: 12rem;
+  object-fit: contain;
+  margin: auto;
+}
+
+.mapa {
+  width: 100%;
+  height: 11rem;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  border: none;
+}
+
+.box-mapa {
+  width: 100%;
+}
+
+.box-mapa p {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+footer .brand {
+  background-color: #bca177;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+footer .brand .links {
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+
+.brand i {
+  color: white;
 }
