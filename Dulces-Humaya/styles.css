@@ -61,35 +61,40 @@ body {
 }
 
 .slide {
-  background-image: url(./IMAGENES/Central/imagenCentral.png);
-  height: 50rem;
+  background-image: url(./IMAGENES/Central/humaya-central.jpg);
+  height: 100vh;
   background-repeat: no-repeat;
-  background-size: cover;
-  padding: 10rem;
+  background-size: 130%;
+  padding: 8rem;
   display: flex;
   align-items: center;
   width: 100%;
-  position: 50px 0;
+  background-position: 100% 55%;
 }
 
 .text-container {
   width: 50%;
   max-width: 50%;
-  margin-left: 50%;
+  margin-left: 53%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 .text-container h1 {
   color: white;
   margin: 1rem 0;
-  font-weight: 300;
+  font-weight: 100;
   margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: 4rem;
+  text-align: center;
 }
 
 .text-container p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   line-height: 3rem;
+  text-align: center;
 }
 
 .btn-conocenos {
@@ -101,6 +106,11 @@ body {
   width: fit-content;
   text-decoration: none;
   margin: 1.8rem auto;
+}
+
+.btn-conocenos:hover {
+  background-color: black;
+  color: white;
 }
 
 .calidad {
@@ -223,18 +233,18 @@ body {
 
 .productos-texto.maicena {
   background-color: #bca177;
-  color: #574b37;
+  color: #684723;
   padding: 0px 2rem 0 11rem;
 }
 
 .link-producto.box-maicena:hover {
-  background-color: #574b37;
+  background-color: #684723;
   color: #bca177;
 }
 
 .link-producto.box-maicena,
 .btn-enviar {
-  color: #574b37;
+  color: #684723;
   border: solid;
 }
 
@@ -330,7 +340,7 @@ input {
 #receta h3 {
   text-align: center;
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 400;
   margin: 1rem 0;
 }
 
