@@ -94,11 +94,10 @@ body {
 
 .btn-conocenos {
   display: block;
-  margin-top: 2rem;
   background-color: rgba(24, 1, 1, 0.589);
   border-radius: 2rem;
   color: white;
-  padding: 1rem;
+  padding: 2rem;
   width: fit-content;
   text-decoration: none;
   margin: 1.8rem auto;
