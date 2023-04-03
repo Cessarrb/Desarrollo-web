@@ -32,7 +32,7 @@ li {
   flex-direction: column;
   justify-content: center;
   width: 60rem;
-  margin: -20.3rem auto 0 auto;
+  margin: -27.3rem auto 0 auto;
 }
 
 .header {
@@ -87,7 +87,7 @@ label {
   padding: 1rem 1rem 1rem 4.5rem;
   border: none;
   border-radius: 0.8rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .tarea-input input::placeholder {
@@ -234,4 +234,31 @@ body.light .filtros label:hover {
 }
 body.light .borrar-completadas {
   color: rgb(72, 75, 106);
+}
+
+body.light .brand p {
+  color: black;
+}
+
+body.light .brand i {
+  color: black;
+}
+
+.brand {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.brand .links {
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+
+.brand i {
+  color: white;
 }
