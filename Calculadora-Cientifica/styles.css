@@ -17,7 +17,6 @@ body {
   width: 45%;
   max-width: 90vh;
   padding: 1rem;
-  background: #fff;
   border-radius: 0.8rem;
   box-shadow: 0 0 1.2rem 1.2rem #cbced1;
 }
@@ -58,4 +57,32 @@ body {
 
 .rows {
   text-align: center;
+}
+
+#eval {
+  background: #33ccff;
+  color: #fff;
+  box-shadow: inset 5px 5px 8px #66d9ff, inset -5px -5px 8px #00ace6;
+}
+
+#eval:hover {
+  box-shadow: inset 5px 5px 8px #00ace6, inset -5px -5px 8px #00ace6;
+}
+
+#ac {
+  background: #33cc33;
+  color: #fff;
+}
+
+#ac:hover {
+  box-shadow: inset 5px 5px 8px #2eb82e, inset -5px -5px 8px #33cc33;
+}
+
+#ce {
+  background: #ff3399;
+  color: #fff;
+}
+
+#ce:hover {
+  box-shadow: inset 5px 5px 8px #e60073, inset -5px -5px 8px #ff3399;
 }
