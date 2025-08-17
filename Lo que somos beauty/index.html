@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo Que Somos Beauty - Trenzas & Cuidado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #FFB6C1;
+            --dark-pink: #FF69B4;
+            --light-pink: #FFD1DC;
+            --text-dark: #333;
+            --text-light: #555;
+            --white: #FFF;
+            --shadow: rgba(255, 182, 193, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #FFF5F7 0%, #FFE0E6 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-pink);
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--dark-pink);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark-pink);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--light-pink) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -70px;
+            left: -70px;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, var(--primary-pink) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--dark-pink), var(--primary-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0px 2px 10px var(--shadow);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--text-light);
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-pink), var(--dark-pink));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+        }
+
+        /* Philosophy Section */
+        .philosophy {
+            padding: 60px 0;
+            background: white;
+            position: relative;
+        }
+
+        .philosophy::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-pink), var(--dark-pink));
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--dark-pink);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: "💋";
+            position: absolute;
+            top: -15px;
+            right: -40px;
+            font-size: 1.5rem;
+        }
+
+        .philosophy-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .philosophy-text {
+            flex: 1;
+        }
+
+        .philosophy-text h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .philosophy-text p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .philosophy-image {
+            flex: 1;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .philosophy-image img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #FFF5F7 0%, #FFE0E6 100%);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: transform 0.3s;
+            cursor: pointer;
+            aspect-ratio: 4/5;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(255, 105, 180, 0.8));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: var(--primary-pink);
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        /* Care Section */
+        .care {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .care-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .care-item {
+            background: linear-gradient(135deg, #FFF5F7 0%, #FFE0E6 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .care-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .care-icon {
+            font-size: 2.5rem;
+            color: var(--dark-pink);
+            margin-bottom: 20px;
+        }
+
+        .care-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .care-item p {
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-pink);
+        }
+
+        .footer-column p, .footer-column li {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column a {
+            text-decoration: none;
+            color: #ccc;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+.footer-column a:hover {
+    color: var(--primary-pink);
+}
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary-pink);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2::after {
+                right: -30px;
+                font-size: 1.2rem;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            nav ul {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            .gallery-item {
+                aspect-ratio: 3/4;
+            }
+            
+            .philosophy-content {
+                flex-direction: column;
+            }
+            
+            .philosophy-image {
+                max-width: 100%;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            
+            .section-title h2::after {
+                right: -25px;
+                font-size: 1rem;
+            }
+            
+            .logo-text {
+                font-size: 18px;
+            }
+            
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item {
+                aspect-ratio: 4/5;
+            }
+            
+            .care-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon">💋</div>
+                <div class="logo-text">Lo Que Somos Beauty</div>
+            </div>
+            <nav>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="nav-menu">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#philosophy">Filosofía</a></li>
+                    <li><a href="#gallery">Trabajos</a></li>
+                    <li><a href="#care">Cuidados</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Lo Que Somos Beauty</h1>
+            <p>Donde cada trenza cuenta una historia y cada estilo refleja tu esencia única</p>
+            <a href="#gallery" class="btn">Ver Nuestros Trabajos</a>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="philosophy">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestra Filosofía</h2>
+            </div>
+            <div class="philosophy-content">
+                <div class="philosophy-text">
+                    <h3>¿Por qué Lo Que Somos?</h3>
+                    <p>Creemos que tu estilo es una expresión auténtica de quién eres. Cada trenza, cada peinado, cuenta la historia de tus experiencias y tu personalidad única.</p>
+                    <p>Nuestro trabajo va más allá de la estética: buscamos empoderarte para que muestres al mundo tu verdadero yo, con confianza y orgullo.</p>
+                    <p>En Lo Que Somos Beauty, no solo creamos estilos, celebramos tu identidad.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Trabajos</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('img/trenza_1.jpg')">
+                    <!-- REEMPLAZA CON TU PRIMERA IMAGEN DE TRENZAS -->
+                    <img src="img/trenza_1.jpg" alt="Trenzas elegantes">
+                    <div class="gallery-overlay">
+                        <h3>Trenzas Elegantes</h3>
+                        <p>Diseños intrincados para ocasiones especiales</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('img/trenza_2.jpg')">
+                    <!-- REEMPLAZA CON TU SEGUNDA IMAGEN DE TRENZAS -->
+                    <img src="img/trenza_2.jpg" alt="Trenzas modernas">
+                    <div class="gallery-overlay">
+                        <h3>Estilo Contemporáneo</h3>
+                        <p>Tendencias actuales con un toque único</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('img/trenza_3.jpg')">
+                    <!-- REEMPLAZA CON TU TERCERA IMAGEN DE TRENZAS -->
+                    <img src="img/trenza_3.jpg" alt="Trenzas infantiles">
+                    <div class="gallery-overlay">
+                        <h3>Diseños Infantiles</h3>
+                        <p>Estilos divertidos y prácticos para niñas</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('img/trenza_4.jpg')">
+                    <!-- REEMPLAZA CON TU CUARTA IMAGEN DE TRENZAS -->
+                    <img src="img/trenza_4.jpg" alt="Trenzas creativas">
+                    <div class="gallery-overlay">
+                        <h3>Creaciones Únicas</h3>
+                        <p>Diseños personalizados según tu personalidad</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('img/trenza_5.jpg')">
+                    <!-- REEMPLAZA CON TU QUINTA IMAGEN DE TRENZAS -->
+                    <img src="img/trenza_5.jpg" alt="Trenzas elegantes">
+                    <div class="gallery-overlay">
+                        <h3>Elegancia Sofisticada</h3>
+                        <p>Estilos refinados para eventos formales</p>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('img/trenza_6.jpg')">
+                    <!-- REEMPLAZA CON TU SEXTA IMAGEN DE TRENZAS -->
+                    <img src="img/trenza_6.jpg" alt="Trenzas vibrantes">
+                    <div class="gallery-overlay">
+                        <h3>Estilos Vibrantes</h3>
+                        <p>Colores y diseños que destacan tu belleza</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Care Section -->
+    <section id="care" class="care">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cuidado de Trenzas</h2>
+            </div>
+            <div class="care-content">
+                <div class="care-item">
+                    <div class="care-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Protección Nocturna</h3>
+                    <p>Duerme con un pañuelo de seda o tela suave para proteger tus trenzas de la fricción y mantenerlas libres de enredos.</p>
+                </div>
+                <div class="care-item">
+                    <div class="care-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Limpieza Suave</h3>
+                    <p>Usa champú diluido para limpiar suavemente el cuero cabelludo sin mojar las trenzas, manteniendo su forma y duración.</p>
+                </div>
+                <div class="care-item">
+                    <div class="care-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3>Evita Alcohol</h3>
+                    <p>Productos con alcohol resecan las trenzas. Opta por hidratantes naturales y aceites ligeros para mantenerlas flexibles.</p>
+                </div>
+                <div class="care-item">
+                    <div class="care-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Secado Completo</h3>
+                    <p>Asegúrate de secar completamente las trenzas después del lavado para evitar malos olores y crecimiento de hongos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footerr-->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Lo Que Somos Beauty</h3>
+                    <p>Celebramos tu identidad a través de estilos únicos que reflejan tu esencia y personalidad.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#philosophy">Filosofía</a></li>
+                        <li><a href="#gallery">Trabajos</a></li>
+                        <li><a href="#care">Cuidados</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Principal 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> +1 (234) 567-890</p>
+                    <p><i class="fas fa-envelope"></i> info@loquesomosbeauty.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Horario</h3>
+                    <p>Lunes - Viernes: 9:00 AM - 7:00 PM</p>
+                    <p>Sábado: 10:00 AM - 5:00 PM</p>
+                    <p>Domingo: Cerrado</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Lo Que Somos Beauty. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.getElementsByClassName('close')[0];
+
+        function openModal(src) {
+            modal.style.display = 'block';
+            modalImg.src = src;
+        }
+
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
